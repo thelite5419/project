@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add animation keyframes */
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .error-message {
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 h-screen">
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">SkillUpPlacement</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="http://127.0.0.1:5500/SkillUpPlacement/frontend/GetStarted.html" class="mr-5 hover:text-white">Home</a>
+            <a href="http://127.0.0.1:5500/SkillUpPlacement/frontend/GetStarted.html#aboutUs" class="mr-5 hover:text-white">About Us</a>
+            <a href="http://127.0.0.1:5500/SkillUpPlacement/frontend/GetStarted.html#ContactUs" class="mr-5 hover:text-white">Contact Us</a>
+            <a href="http://127.0.0.1:5500/SkillUpPlacement/frontend/GetStarted.html#logInSection" class="mr-5 hover:text-white">Logins</a>
+          </nav>
+        </div>
+      </header>
+    <section class="text-gray-400 bg-gray-900 body-font h-full p-4">
+        <div class="container mx-auto h-full flex flex-wrap items-center justify-center pb-40 p-4">
+            <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 ">
+                <h1 class="title-font font-medium text-3xl text-white">
+                    Welcome to the Student login portal
+                </h1>
+                <p class="leading-relaxed mt-4 p-4">
+                    Welcome to the SkillUpPlacement Student portal. This platform is your gateway to placement preparation, resources, and guidance. 
+                    Log in to access personalized tools, track your progress, and stay connected with placement activities. 
+                    Start your journey towards securing your dream job today.
+                </p>
+            </div>
+            
+            <div class="lg:w-2/6 md:w-1/2 bg-gray-800 bg-opacity-50 rounded-lg p-8 flex flex-col w-full">
+                <h2 class="text-white text-lg font-medium title-font mb-5">Sign In</h2>
+                <!-- username -->
+                <div class="relative mb-4">
+                    <label for="username" class="leading-7 text-sm text-gray-400">Usernamr (PRN)</label>
+                    <input type="text" id="username" name="username" class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-blue-900 rounded border border-gray-600 focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    <p id="username-error" class="error-message hidden"></p> <!-- Error message for username -->
+                </div>
+                <!-- Password -->
+                <div class="relative mb-4">
+                    <label for="password" class="leading-7 text-sm text-gray-400">Password</label>
+                    <div class="flex items-center">
+                        <input type="password" id="password" name="password" class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-blue-900 rounded border border-gray-600 focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        <button type="button" id="togglePassword" class="ml-2 text-gray-400 hover:text-white focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.046.166-.094.331-.145.497a10.49 10.49 0 01-.145.503C20.268 16.057 16.477 19 12 19c-4.477 0-8.268-2.943-9.542-7-.046-.166-.094-.331-.145-.497a10.49 10.49 0 01-.145-.503z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p id="password-error" class="error-message hidden"></p> <!-- Error message for password -->
+                </div>
+                <button id="loginBtn" class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg mt-3">Log In</button>
+ 
+            <!-- Divider -->
+            <div class="relative flex items-center justify-center p-3">
+                <span class="absolute inset-x-0 h-px bg-gray-300"></span>
+                <span class="relative bg-gray-900 px-4 text-sm text-gray-400 rounded-lg">Or log in with</span>
+            </div>
+            <!-- Social Login Buttons -->
+            <div class="flex flex-col gap-3">
+
+                <!-- Google Button -->
+                <button class="flex items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-3 text-center text-sm font-semibold text-gray-800 transition duration-100 hover:bg-gray-100">
+                    <svg class="h-5 w-5 shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.7449 12.27C23.7449 11.48 23.6749 10.73 23.5549 10H12.2549V14.51H18.7249C18.4349 15.99 17.5849 17.24 16.3249 18.09V21.09H20.1849C22.4449 19 23.7449 15.92 23.7449 12.27Z" fill="#4285F4" />
+                        <path d="M12.2549 24C15.4949 24 18.2049 22.92 20.1849 21.09L16.3249 18.09C15.2449 18.81 13.8749 19.25 12.2549 19.25C9.12492 19.25 6.47492 17.14 5.52492 14.29H1.54492V17.38C3.51492 21.3 7.56492 24 12.2549 24Z" fill="#34A853" />
+                        <path d="M5.52488 14.29C5.27488 13.57 5.14488 12.8 5.14488 12C5.14488 11.2 5.28488 10.43 5.52488 9.71V6.62H1.54488C0.724882 8.24 0.254883 10.06 0.254883 12C0.254883 13.94 0.724882 15.76 1.54488 17.38L5.52488 14.29Z" fill="#FBBC05" />
+                        <path d="M12.2549 4.75C14.0249 4.75 15.6049 5.36 16.8549 6.55L20.2749 3.13C18.2049 1.19 15.4949 0 12.2549 0C7.56492 0 3.51492 2.7 1.54492 6.62L5.52492 9.71C6.47492 6.86 9.12492 4.75 12.2549 4.75Z" fill="#EA4335" />
+                    </svg>
+                    Continue with Google
+                </button>
+            </div>
+            <div class="flex items-center justify-center pt-4">
+                <p class="text-center text-sm text-gray-500">Don't have an account? <a href="register.html" class="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Register</a></p>
+              </div>
+            </div>
+            
+        </div>
+            
+    </section>
+
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const usernameError = document.getElementById('username-error');
+        const passwordError = document.getElementById('password-error');
+        const togglePassword = document.getElementById('togglePassword');
+
+        // Validation logic
+        loginBtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form submission
+            let isValid = true;
+
+            // Clear previous errors
+            usernameError.textContent = '';
+            passwordError.textContent = '';
+            usernameError.classList.add('hidden');
+            passwordError.classList.add('hidden');
+            usernameInput.classList.remove('border-red-500');
+            passwordInput.classList.remove('border-red-500');
+
+            // Username validation
+            if (username.length !== 10) {
+                isValid = false;
+                usernameError.textContent = 'Username must be 10 digits long (PRN).';
+                usernameError.classList.remove('hidden');
+            } else {
+                usernameError.classList.add('hidden');
+            }
+
+            // Password validation
+            const password = passwordInput.value.trim();
+            const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/; // At least 1 uppercase, 1 number, 1 special character
+            if (!passwordRegex.test(password)) {
+                passwordError.textContent = 'Password must contain at least 1 uppercase letter, 1 special character, and 1 number';
+                passwordError.classList.remove('hidden');
+                passwordInput.classList.add('border-red-500');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Submit the form or handle valid login logic here
+                alert('Login successful');
+            }
+        });
+
+        // Toggle password visibility
+        togglePassword.addEventListener('click', function () {
+            const passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        });
+    </script>
+</body>
+</html>

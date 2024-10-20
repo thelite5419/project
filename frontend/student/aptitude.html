@@ -1,0 +1,204 @@
+<html>
+<head>
+    <title>IndiaBIX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div id="sidebar" class="w-1/4 bg-white h-screen shadow-md">
+            <div class="p-4">
+                <img alt="IndiaBIX logo" class="mb-4" height="50" src="WhatsApp Image 2024-10-18 at 12.05.42_4dfe6cb1.jpg"/>
+            </div>
+            <nav class="px-4">
+                <ul>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-home mr-2"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Arithmetic Aptitude
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-chart-bar mr-2"></i>
+                            Data Interpretation
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-font mr-2"></i>
+                            Verbal Ability
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-brain mr-2"></i>
+                            Logical Reasoning
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-spell-check mr-2"></i>
+                            Verbal Reasoning
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-puzzle-piece mr-2"></i>
+                            Nonverbal Reasoning
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-clock mr-2"></i>
+                            Online Tests
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-newspaper mr-2"></i>
+                            Current Affairs
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center text-gray-700 hover:text-green-500" href="#">
+                            <i class="fas fa-book mr-2"></i>
+                            General Knowledge
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Main Content -->
+        <div class="w-3/4 p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold">Skillup Placement</h1>
+                <div class="flex items-center space-x-4">
+                    <input id="searchInput" class="border rounded px-4 py-2" placeholder="Search" type="text"/>
+                    <i class="fas fa-search text-gray-500"></i>
+                    <i class="fas fa-share-alt text-gray-500"></i>
+                    <i class="fas fa-cog text-gray-500"></i>
+                    <i class="fas fa-sign-out-alt text-gray-500"></i>
+                </div>
+            </div>
+            <h2 class="text-xl font-bold text-green-600 mb-2">Welcome to skillupPlacement.in!</h2>
+            <p class="text-gray-700 mb-6">Aptitude questions and answers for your placement interviews and competitive exams!</p>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-green-600 font-bold mb-2">General Aptitude</h3>
+                    <ul class="text-gray-700">
+                        <li>Arithmetic Aptitude</li>
+                        <li>Data Interpretation</li>
+                        <li>Online Aptitude Test</li>
+                        <li>Data Interpretation Test</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-green-600 font-bold mb-2">Verbal and Reasoning</h3>
+                    <ul class="text-gray-700">
+                        <li>Verbal Ability</li>
+                        <li>Logical Reasoning</li>
+                        <li>Verbal Reasoning</li>
+                        <li>Non Verbal Reasoning</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-green-600 font-bold mb-2">Current Affairs &amp; GK</h3>
+                    <ul class="text-gray-700">
+                        <li>Current Affairs</li>
+                        <li>Basic General Knowledge</li>
+                        <li>General Science</li>
+                        <li>Read more...</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-green-600 font-bold mb-2">Interview</h3>
+                    <ul class="text-gray-700">
+                        <li>Placement Papers</li>
+                        <li>Group Discussion</li>
+                        <li>HR Interview</li>
+                        <li>Read more...</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-green-600 font-bold mb-2">Engineering</h3>
+                    <ul class="text-gray-700">
+                        <li>Mechanical Engineering</li>
+                        <li>Civil Engineering</li>
+                        <li>ECE, EEE, CSE</li>
+                        <li>Chemical Engineering</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-green-600 font-bold mb-2">Programming</h3>
+                    <ul class="text-gray-700">
+                        <li>C Programming</li>
+                        <li>C++ Programming</li>
+                        <li>C# Programming</li>
+                        <li>Java Programming</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-green-600 font-bold mb-2">Online Tests</h3>
+                    <ul class="text-gray-700">
+                        <li>Online Test 1</li>
+                        <li>Online Test 2</li>
+                        <li>Online Test 3</li>
+                        <li>Online Test 4</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-green-600 font-bold mb-2">Technical MCQs</h3>
+                    <ul class="text-gray-700">
+                        <li>Technical MCQ 1</li>
+                        <li>Technical MCQ 2</li>
+                        <li>Technical MCQ 3</li>
+                        <li>Technical MCQ 4</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-green-600 font-bold mb-2">Technical Short Answers</h3>
+                    <ul class="text-gray-700">
+                        <li>Short Answer 1</li>
+                        <li>Short Answer 2</li>
+                        <li>Short Answer 3</li>
+                        <li>Short Answer 4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Toggle sidebar visibility
+        document.getElementById('toggleSidebar').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('hidden');
+        });
+
+        // Handle search input
+        document.getElementById('searchInput').addEventListener('input', function(event) {
+            var query = event.target.value.toLowerCase();
+            var items = document.querySelectorAll('.grid div ul li');
+            items.forEach(function(item) {
+                if (item.textContent.toLowerCase().includes(query)) {
+                    item.parentElement.parentElement.classList.remove('hidden');
+                } else {
+                    item.parentElement.parentElement.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
